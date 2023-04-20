@@ -20,7 +20,7 @@ section{
     top: 100px;
     right: 0px;
     background: rgba(0, 0, 0, 0);
-    z-index: 101;
+    z-index: 50;
     border-radius: 50%;
 }
 .style-switcher button{
