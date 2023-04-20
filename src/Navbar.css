@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
+
+.container{
+    margin: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  /*  background-color: rgba(0,0,0,0.1);*/
+    overflow: hidden;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 85px;
+}
+
+.navbar{
+    margin: 0;
+    z-index: 100;
+   /* padding: 5px;*/
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    background-color: rgba(0,0,0,0.1); 
+    overflow: hidden;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    height: 85px;
+}
+
+.scroll{
+    background-color: #191825;
+}
+
+.scroll a{
+    color: #fff;
+}
+.scroll .menu-icon{
+    color:#fff;
+}
+.logo{
+    font-size: 70px;
+    font-family: Caramel;
+    padding-left: 5%;
+}
+.nav{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-right: 5%;
+    gap: 1em;
+}
+.nav li{
+    margin: 30px;
+    cursor: pointer;
+}
+.nav li span{
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    transition: all 0.4s ease;
+}
+.nav li:hover span, .nav li:hover a,.active a, .nav .active span{
+    color: #1854b4;
+}
+a{  
+    text-decoration: none;
+    color:#000;
+}
+.logo a span{
+    color: #1854b4;
+    margin: 0;
+}
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*background:linear-gradient(180deg, #865DFF, #191825);*/
+    list-style: none;
+    padding: 50px 0 0;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.menu-list li, .menu-icon{
+    margin-top: 10%;
+    font-size: 30px;
+}
+.menu-icon{
+    display: none;
+}
+
+.menu-list.show {
+    transform: translateY(0);
+}
+.ham-nav{
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1854b4;
+}
+.ham-nav li{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 35px;
+    color: #fff;
+}
+.ham-nav li a{
+    color: #fff;
+}
+.ham-nav li span{
+    display: none;
+}
+.ham-nav li span:hover{
+    display: inline;
+    color: #fff;
+}
+
+
+
+
+@media screen and (max-width: 1135px) {
+    .navbar{
+        justify-content:space-between;
+           }
+    .nav{
+        display: none;
+    }    
+    .menu-icon{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+}
