@@ -25,6 +25,9 @@ function Projects (props){
         event.currentTarget.classList.toggle('full-screen');
         setDetails(!details)
         
+        const section = document.getElementById('projects');
+        const sectionTop = section.offsetTop - 90;
+        window.scrollTo({ top: sectionTop, behavior: 'smooth' });
           
 
     }
