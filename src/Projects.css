@@ -1,3 +1,7 @@
+#prokects{
+    height: auto;
+    margin-bottom: 15px;
+}
 .card-container{
     display: flex;
     flex-wrap: wrap;
@@ -17,10 +21,7 @@
 .none{
     display: none;
 }
-.card-col{
-    width: 50%;
-    text-align: center;
-}
+
 .details, .card-col h4, .left-wrap p{
     margin: 15px;
 }
@@ -49,7 +50,6 @@
 }
 .full-screen img{
     margin: 30px;
-
     aspect-ratio: 2/5;
 }
 
@@ -74,4 +74,28 @@ img{
     width: 100%;
     height: auto;
     
+}
+
+@media screen and (max-width: 1323px){
+    .full-screen{
+        margin-top: 50px;
+        flex-direction: column-reverse;
+        flex-basis: 50%;
+        width: 68%;
+        height: auto;
+    }
+    .full-screen img{
+        padding: 0;
+        margin: 0;
+        aspect-ratio: 4/3;
+    }
+    
+    .left-wrap{
+        width: 100%;
+        margin: 0;
+    }
+    .left-wrap h4{
+        margin: 0;
+    }
+
 }

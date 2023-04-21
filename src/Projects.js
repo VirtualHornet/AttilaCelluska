@@ -42,7 +42,8 @@ function Projects (props){
                     setActive6(!active6);
                     setActive2(!active2);
 
-                }}> <div className='left-wrap'>
+                }}> 
+                    <div className='left-wrap'>
                         <h4>CURRENCY BALANCES</h4>
                         <p className='par'>REACT</p>
                         <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>CURRENCY BALANCES is a website that allows users to search for information 
