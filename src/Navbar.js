@@ -73,19 +73,19 @@ function Navbar (props){
             <Link to="/home"><a href="#home"><span>A</span>ttila </a></Link>
             </div>
             <ul className="nav">
-            <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleMenuItemClick('home')}><Link to="/home"><a><span>&lt;</span>Home<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleMenuItemClick('about')}><Link to="/about"><a><span>&lt;</span>About<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleMenuItemClick('projects')}><Link to="/projects"><a><span>&lt;</span>Projects<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleMenuItemClick('contact')}><Link to="/contact"><a><span>&lt;</span>Contact<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleMenuItemClick('home')}><Link to="/AttilaCelluska/home"><a><span>&lt;</span>Home<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleMenuItemClick('about')}><Link to="/AttilaCelluska/about"><a><span>&lt;</span>About<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleMenuItemClick('projects')}><Link to="/AttilaCelluska/projects"><a><span>&lt;</span>Projects<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleMenuItemClick('contact')}><Link to="/AttilaCelluska/contact"><a><span>&lt;</span>Contact<span>/&gt;</span></a></Link></li>
             </ul>        
             <div className="menu-icon" onClick={handleClick}>
                 {click ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={click? "ham-nav":'none'}>
-            <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleHamMenuItemClick('home')}><Link to="/home"><a><span>&lt;</span>Home<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleHamMenuItemClick('about')}><Link to="/about"><a><span>&lt;</span>About<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleHamMenuItemClick('projects')}><Link to="/projects"><a><span>&lt;</span>Projects<span>/&gt;</span></a></Link></li>
-            <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleHamMenuItemClick('contact')}><Link to="/contact"><a><span>&lt;</span>Contact<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleHamMenuItemClick('home')}><Link to="/AttilaCelluska/home"><a><span>&lt;</span>Home<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleHamMenuItemClick('about')}><Link to="/AttilaCelluska/about"><a><span>&lt;</span>About<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleHamMenuItemClick('projects')}><Link to="/AttilaCelluska/projects"><a><span>&lt;</span>Projects<span>/&gt;</span></a></Link></li>
+            <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleHamMenuItemClick('contact')}><Link to="/AttilaCelluska/contact"><a><span>&lt;</span>Contact<span>/&gt;</span></a></Link></li>
             <li><div className="ham-icon" onClick={handleClick}>
                <FaTimes></FaTimes>
             </div></li>
