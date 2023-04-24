@@ -63,6 +63,9 @@ h3{
 .home-info{
     width: 100%;
 }
+#mini{
+    display: none;
+}
 #profil{
     margin-top: 150px;
     padding: 15px;
@@ -115,14 +118,50 @@ h3{
     }
 }
 @media screen and (max-width: 847px){
-    .home-img img{
+    .home-img{
         display: none;
+    }
+    .home-info{
+        text-align: center;
+        width: 100%;
+    }
+    .home-info h3, .my-profession{
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    #mini{
+        display: block;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        border-radius: 15px;
+        border: 3px solid #1854b4;
+    }
+    #btn-cv{
+        margin:auto;
+    }
+    .my-profession{
+        padding-top: 0px;
     }
 }
 
 @media screen and (max-width: 450px){
+    .row{
+        gap:1em;
+    }
+    #mini{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .my-profession{
+        padding-top: 0px;
+    }
     .home-info h3{
-        margin-top: 25%;
+        margin-top: 5%;
         font-size: 30px;
         margin-left: 10%;
     }

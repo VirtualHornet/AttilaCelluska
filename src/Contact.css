@@ -1,3 +1,6 @@
+#contact{
+    height: 100vh;
+}
 .shadow{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
@@ -9,7 +12,7 @@
 .email{
     width: 60%;
     margin-left: 5%;
-    margin-right: 3%; 
+    margin-right: 3%;
 }
 input, textarea{
     border: none;
@@ -29,6 +32,14 @@ h2{
 }
 #name{
     width: 90%;
+}
+#email{
+    width: 100%;
+}
+.col-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 textarea{
@@ -83,5 +94,14 @@ p a:hover{
     }
     .email input, .email textarea{
         padding: 5px;
+    }
+    .col-row{
+        flex-direction: column;
+    }
+    label{
+        display: none;
+    }
+    #email, #subject, textarea{
+        width: 90%;
     }
 }

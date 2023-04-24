@@ -36,12 +36,13 @@ function Contact (props){
                     </div>
                    
                     <br></br>
-                    <div className="row">
+                    <div className="col-row">
                         <div className="col">
                             <input type="text" name="name" id="name" placeholder="Name"/>
                         </div>
+                        <br></br>
                         <div className="col">
-                             <input type="email" name="email" id="email"  placeholder="Email" /> 
+                            <input type="email" name="email" id="email"  placeholder="Email" />
                         </div>
                     </div>
                     <br></br>
