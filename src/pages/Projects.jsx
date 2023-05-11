@@ -1,11 +1,11 @@
 import './Projects.css';
 import {useState} from 'react'
-import currency from './img/elso.png';
-import tik from './img/tik.png';
-import simon from './img/simon.png';
-import media from './img/mediawiki.png';
-import weather from './img/weather.png';
-import calculator from './img/calculator.png';
+import currency from '../img/elso.png';
+import tik from '../img/tik.png';
+import shop from '../img/shop.png'
+import simon from '../img/simon.png';
+import plant from '../img/plant.png'
+import calculator from '../img/calculator.png';
 import { VscGithub } from "@react-icons/all-files/vsc/VscGithub";
 function Projects (props){
 
@@ -68,17 +68,17 @@ function Projects (props){
                     setActive6(!active6);
 
                 }}>
-                    <div className='left-wrap'>
-                        <h4>TIK TAK TOE</h4>
-                        <p>REACT, Bootstrap 5</p>
-                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>The classic TIK TAK TOE game, against computer in React.</p>
+                <div className='left-wrap'>
+                        <h4>SHOP</h4>
+                        <p>REACT</p>
+                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>This website is a sample online store , where you can buy products in many categorys</p>
                         <p className={details?"details":"none"}>    
-                        <a href='https://github.com/VirtualHornet/TikTakToe'><VscGithub></VscGithub></a>
-                        <a href='https://virtualhornet.github.io/TikTakToe/'>Live Demo</a>
+                        <a href='https://github.com/VirtualHornet/Shop'><VscGithub></VscGithub></a>
+                        <a href='https://virtualhornet.github.io/Shop/'>Live Demo</a>
                         </p>   
                     </div>
                    
-                    <img src={tik} alt="tik"/>
+                    <img src={shop} alt="shop"/>
                 </div>   
                 <div className={active3?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
@@ -90,15 +90,15 @@ function Projects (props){
 
                 }}>
                     <div className='left-wrap'>
-                        <h4>SIMON SAYS</h4>
-                        <p>REACT, Bootstrap 5</p>
-                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>The classic SIMON SAYS game in React.</p>
+                        <h4>PLANTS</h4>
+                        <p>REACT</p>
+                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>The PLANTS Database provides standardized information about the vascular plants, mosses, liverworts, hornworts, and lichens of the U.S. and its territories.</p>
                         <p className={details?"details":"none"}>    
-                        <a href='https://github.com/VirtualHornet/Simon'><VscGithub></VscGithub></a>
-                        <a href='https://virtualhornet.github.io/Simon/'>Live Demo</a>
+                        <a href='https://github.com/VirtualHornet/Plants'><VscGithub></VscGithub></a>
+                        <a href='https://virtualhornet.github.io/Plants/'>Live Demo</a>
                         </p>   
                     </div>
-                    <img src={simon} alt="simon"/>
+                    <img src={plant} alt="plant"/>
                 </div>
                 <div className={active4?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
@@ -109,45 +109,46 @@ function Projects (props){
                     setActive6(!active6);
 
                 }}>
-                    <div className='left-wrap'>
-                        <h4>MEDIAWIKI</h4>
-                        <p>REACT</p>
-                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>This website works like Wikipedia, 
-                        and also you can search for random words to.</p>
+                   <div className='left-wrap'>
+                        <h4>SIMON SAYS</h4>
+                        <p>REACT, Bootstrap 5</p>
+                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>The classic SIMON SAYS game in React.</p>
                         <p className={details?"details":"none"}>    
-                        <a href='https://github.com/VirtualHornet/MediaWiki'><VscGithub></VscGithub></a>
-                        <a href='https://virtualhornet.github.io/MediaWiki/'>Live Demo</a>
+                        <a href='https://github.com/VirtualHornet/Simon'><VscGithub></VscGithub></a>
+                        <a href='https://virtualhornet.github.io/Simon/'>Live Demo</a>
                         </p>   
                     </div>
-                    <img src={media} alt="media"/>
+                    <img src={simon} alt="simon"/>
                 </div>
                 <div className={active5?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive3(!active3);
-                    setActive4(!active4);
                     setActive2(!active2);
+                    setActive4(!active4);
                     setActive6(!active6);
 
                 }}>
-                      <div className='left-wrap'>
-                        <h4>LOCAL WEATHER</h4>
-                        <p>REACT</p>
-                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>In this website you can find the current weather data on your location. </p>
+                <div className='left-wrap'>
+                        <h4>TIK TAK TOE</h4>
+                        <p>REACT, Bootstrap 5</p>
+                        <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>The classic TIK TAK TOE game, against computer in React.</p>
                         <p className={details?"details":"none"}>    
-                        <a href='https://github.com/VirtualHornet/MediaWiki'><VscGithub></VscGithub></a>
-                        <a href='https://virtualhornet.github.io/MediaWiki/'>Live Demo</a>
+                        <a href='https://github.com/VirtualHornet/TikTakToe'><VscGithub></VscGithub></a>
+                        <a href='https://virtualhornet.github.io/TikTakToe/'>Live Demo</a>
                         </p>   
-                    </div>
-                    <img src={weather} alt="weather"/>
                 </div>
+                   
+                    <img src={tik} alt="tik"/>
+                </div>   
                 <div className={active6?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
-                    setActive3(!active3);
+                    setActive2(!active2);
                     setActive4(!active4);
                     setActive5(!active5);
-                    setActive2(!active2);
+                    setActive3(!active3);
+
                 }}>
                      <div className='left-wrap'>
                         <h4>CALCULATOR</h4>
