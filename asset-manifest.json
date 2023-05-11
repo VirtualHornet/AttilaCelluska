@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/AttilaCelluska/static/css/main.35bb5f0f.css",
+    "main.js": "/AttilaCelluska/static/js/main.61d9a137.js",
+    "static/media/plant.png": "/AttilaCelluska/static/media/plant.2aae7dd7d57b8aac9bae.png",
+    "static/media/computer.png": "/AttilaCelluska/static/media/computer.7123e28d465c3a0d4c2e.png",
+    "static/media/CV.png": "/AttilaCelluska/static/media/CV.677dc3bde752c7e106af.png",
+    "static/media/shop.png": "/AttilaCelluska/static/media/shop.525349c1837546a1f21c.png",
+    "static/media/simon.png": "/AttilaCelluska/static/media/simon.c1afc49adec298dfa208.png",
+    "static/media/tik.png": "/AttilaCelluska/static/media/tik.9d734746c6766b28af31.png",
+    "static/media/elso.png": "/AttilaCelluska/static/media/elso.8b8ea00a8b5582b4981c.png",
+    "static/media/calculator.png": "/AttilaCelluska/static/media/calculator.8369592558f85cc00a0f.png",
+    "index.html": "/AttilaCelluska/index.html",
+    "main.35bb5f0f.css.map": "/AttilaCelluska/static/css/main.35bb5f0f.css.map",
+    "main.61d9a137.js.map": "/AttilaCelluska/static/js/main.61d9a137.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35bb5f0f.css",
+    "static/js/main.61d9a137.js"
+  ]
+}
