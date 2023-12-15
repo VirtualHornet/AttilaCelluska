@@ -3,11 +3,29 @@ import './Contact.css';
 import { GiPositionMarker } from 'react-icons/gi';
 import { AiFillGithub,AiOutlineMail } from 'react-icons/ai';
 import emailjs from '@emailjs/browser';
-
+import {motion, useInView} from 'framer-motion';
+import { useRef } from 'react';
 
 
 
 function Contact (props){
+
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+   
+
+    const variant1=  {
+        hidden: {opacity:0, x:'-50vw'},
+        visible: {opacity:1, x:0},
+    }
+
+    const variant2=  {
+        hidden: {opacity:0},
+        visible: {opacity:1},
+    }
+
+ 
+
  
 
     const submitHandler = (e) =>{
@@ -21,11 +39,31 @@ function Contact (props){
     }
 
     return(
-        <section id="contact" className={(props.color==="light")?"":"darkbackground"}>
+        <section id="contact" className={(props.color==="light")?"":"darkbackground"} ref={ref}>
             <div className="shadow">
             <div className="email">
-                <h2>Get in touch</h2>
-                <form onSubmit={submitHandler}>
+                <motion.h2
+                     variants={variant1}
+                     initial="hidden"
+                     animate={
+                         isInView?'visible':""
+                     }
+                     transition={{
+                         duration: 1,
+                         type: "spring", 
+                         stiffness: 100
+                     }}
+                >Get in touch</motion.h2>
+                <motion.form onSubmit={submitHandler}
+                     variants={variant2}
+                     initial="hidden"
+                     animate={
+                         isInView?'visible':""
+                     }
+                     transition={{
+                         duration: 2,
+                     }}
+                >
                     <div className="row">
                         <div className="col">
                             <label for="name">NAME:</label> 
@@ -63,14 +101,34 @@ function Contact (props){
                     <br></br>
                         <textarea name="message" cols="30" rows="10"  placeholder="Message"></textarea>
                     
-                    <div className="row">
+                    <motion.div 
+                         variants={variant1}
+                         initial="hidden"
+                         animate={
+                             isInView?'visible':""
+                         }
+                         transition={{
+                             duration: 1,
+                             type: "spring", 
+                             stiffness: 100
+                         }}
+                    className="row">
                         <button>Send</button>
-                    </div>
+                    </motion.div>
                     
-                </form>
+                </motion.form>
             </div>
             <div className="info">
-                <div className="info-container">
+                <motion.div 
+                     variants={variant2}
+                     initial="hidden"
+                     animate={
+                         isInView?'visible':""
+                     }
+                     transition={{
+                         duration: 2
+                     }}
+                className="info-container">
                     <h2>Let's Get in touch</h2>
                     <p>I'm open for any suggestion or just to have a chat</p>
                     <div className="row">
@@ -84,8 +142,8 @@ function Contact (props){
                     <div className="row">
                         <p> <AiFillGithub/> <a href='https://github.com/VirtualHornet?tab=repositories'>https://github.com/VirtualHornet?tab=repositories</a></p>
                     </div>
-                    <br></br>
-                </div>
+                    <br></br>  
+                </motion.div>
             </div>
             </div>
         </section>

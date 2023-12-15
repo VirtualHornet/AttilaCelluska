@@ -6,7 +6,7 @@ class TypingAnimation extends Component {
   componentDidMount() {
    
     const options = {
-        strings:["Front End Developer","Web Developer","Software Engineer"],
+        strings:["Front End Developer","Php Developer","Software Engineer"],
         typeSpeed: 100,
         BackSpeed: 60,
         loop: true

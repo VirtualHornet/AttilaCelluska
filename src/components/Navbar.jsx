@@ -1,11 +1,14 @@
 import './Navbar.css';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
+import {motion, useInView} from 'framer-motion';
 
 
 function Navbar (props){
 
+    const ref= useRef(null);
+    const isInView = useInView(ref);
    
     const [click, setClick] = useState(false);
     const [color, setColor] = useState(false);
@@ -64,12 +67,30 @@ function Navbar (props){
      };
      window.addEventListener('scroll', changeNavbarColor);
 
+     const variant=  {
+      hidden: {opacity:0, y:'-85px'},
+      visible: {opacity:1, y:0},
+  }
+
 
     return (
         /*-- Navbar Start  ----------*/
 
-        <nav className={(props.color==="light")?"container":"container scroll"}>
-          <div className={color ? 'navbar scroll' : 'navbar'}>
+        <nav className={(props.color==="light")?"container":"container scroll"} ref={ref}>
+          <motion.div 
+             variants={variant}
+             initial="hidden"
+             animate={
+                 isInView?'visible':""
+             }
+             transition={{
+                 duration: 0.25,
+                 delay: 1,
+                
+             }}
+          
+          
+          className={color ? 'navbar scroll' : 'navbar'}>
             <div className="logo">
             <Link to="/home"><a href="#home"><span>A</span>ttila </a></Link>
             </div>
@@ -91,7 +112,7 @@ function Navbar (props){
                <FaTimes></FaTimes>
             </div></li>
             </ul> 
-          </div>
+          </motion.div>
           
          
          

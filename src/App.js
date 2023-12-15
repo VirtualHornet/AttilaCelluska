@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import { useState } from 'react';
 import {motion} from'framer-motion';  
 import Footer from './components/Footer';
+import useScrollSpinner from '@dan-pugsley/react-scroll-spinner';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -13,20 +14,29 @@ function App() {
     setIsDarkMode(!isDarkMode);
   }
 
+  /*TODO 
+    -spinning text around the sun icon
+    -picture follow the mouse on move
+    -open animation
+    -background nonfigurative
+    -content check, add normal description etc
+    -use framer program
+
+  */
+
+  const { spinnerRef, setSpinnerScroll } = useScrollSpinner();
   return (
-    <motion.div
-    animate= {{opacity:1}}
-    initial = {{opacity:0}}
-    exit={{opacity:0}}
-    transition={{duration:0.5}}
-  > 
+    <div onScroll={e => setSpinnerScroll(e.target.scrollTop)}> 
     <div className={isDarkMode?"light":"dark"}>
 
       <div className='style-switcher'>
          <button className='style-switcher' onClick={handleToggle}>
-          <span>{isDarkMode ? '🌞' : '🌙'}</span> 
+          <span>{isDarkMode ? '🌞' : '🌙'}</span>   
+          <div ref={spinnerRef}>Spinning element</div>
         </button>     
       </div>
+      https://framer.com/m/framer/ArcText.js
+    
      
      <Home color={isDarkMode?"light":"dark"}/>
      <About color={isDarkMode?"light":"dark"}/>
@@ -34,7 +44,7 @@ function App() {
      <Contact color={isDarkMode?"light":"dark"}/>
      <Footer/>
     </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -7,7 +7,39 @@ import simon from '../img/simon.png';
 import plant from '../img/plant.png'
 import calculator from '../img/calculator.png';
 import { VscGithub } from "@react-icons/all-files/vsc/VscGithub";
+import {motion, useInView} from 'framer-motion';
+import { useRef } from 'react';
+
+
 function Projects (props){
+
+    const data = [
+        {
+            title: "CURRENCY BALANCES",
+            stack:'REACT',
+            url: currency,
+            description:"CURRENCY BALANCES is a website that allows users to search for information about currency balances in real-time, and there is a possibility to check a bigger value's exchanged currency.",
+            code:"https://github.com/VirtualHornet/CURRENCY-CONVERTER" ,
+            live:"https://virtualhornet.github.io/CURRENCY-CONVERTER/"
+        },
+        {
+            title: "SHOP",
+            stack:'REACT',
+            url: shop,
+            description:"This website is a sample online store , where you can buy products in many categorys",
+            code:"https://github.com/VirtualHornet/Shop" ,
+            live:"https://virtualhornet.github.io/Shop/"   
+        },
+        {
+            title: "PLANTS",
+            stack:'REACT',
+            url: plant,
+            description:"The PLANTS Database provides standardized information about the vascular plants, mosses, liverworts, hornworts, and lichens of the U.S. and its territories.",
+            code:"https://github.com/VirtualHornet/Plants" ,
+            live:"https://virtualhornet.github.io/Plants/"  
+        }
+    ]
+    
 
    const [active1, setActive1] = useState(false);
    const [active2, setActive2] = useState(false);
@@ -17,8 +49,20 @@ function Projects (props){
    const [active6, setActive6] = useState(false);
    const [details, setDetails] = useState(false);
 
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+   
 
+    const variant1=  {
+        hidden: {opacity:0, x:'-50vw'},
+        visible: {opacity:1, x:0},
+    }
 
+    
+const item = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  }
 
 
     const handleClick = event => {
@@ -34,10 +78,30 @@ function Projects (props){
 
 
     return(
-        <section id="projects">
-            <h2>My new projects</h2>
+        <section id="projects" ref={ref}>
+            <motion.h2
+                 variants={variant1}
+                 initial="hidden"
+                 animate={
+                     isInView?'visible':""
+                 }
+                 transition={{
+                     duration: 1,
+                     type: "spring", 
+                     stiffness: 100
+                 }}
+            >My new projects</motion.h2>
             <div className="card-container" >
-                <div className={active1?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                <motion.div 
+                      variants={item}
+                      initial="hidden"
+                      animate={
+                          isInView?'visible':""
+                      }
+                      transition={{
+                          duration: 0.5
+                      }}
+                className={active1?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive3(!active3);
                     setActive4(!active4);
@@ -58,8 +122,19 @@ function Projects (props){
                     </div>
                    
                     <img src={currency} alt="currency"/>
-                </div>
-                <div className={active2?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                </motion.div>
+                <motion.div 
+                      variants={item}
+                      initial="hidden"
+                      animate={
+                          isInView?'visible':""
+                      }
+                      transition={{
+                          duration: 0.5,
+                          delay: 0.25
+                      }}
+                
+                className={active2?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive3(!active3);
@@ -79,8 +154,18 @@ function Projects (props){
                     </div>
                    
                     <img src={shop} alt="shop"/>
-                </div>   
-                <div className={active3?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                </motion.div>   
+                <motion.div 
+                     variants={item}
+                     initial="hidden"
+                     animate={
+                         isInView?'visible':""
+                     }
+                     transition={{
+                         duration: 0.5,
+                         delay: 0.5
+                     }}
+                className={active3?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive2(!active2);
@@ -99,8 +184,18 @@ function Projects (props){
                         </p>   
                     </div>
                     <img src={plant} alt="plant"/>
-                </div>
-                <div className={active4?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                </motion.div>
+                <motion.div 
+                    variants={item}
+                    initial="hidden"
+                    animate={
+                        isInView?'visible':""
+                    }
+                    transition={{
+                        duration: 0.5,
+                        delay: 0.75
+                    }}
+                className={active4?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive3(!active3);
@@ -119,8 +214,18 @@ function Projects (props){
                         </p>   
                     </div>
                     <img src={simon} alt="simon"/>
-                </div>
-                <div className={active5?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                </motion.div>
+                <motion.div 
+                    variants={item}
+                    initial="hidden"
+                    animate={
+                        isInView?'visible':""
+                    }
+                    transition={{
+                        duration: 0.5,
+                        delay: 1
+                    }}
+                className={active5?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive3(!active3);
@@ -140,8 +245,19 @@ function Projects (props){
                 </div>
                    
                     <img src={tik} alt="tik"/>
-                </div>   
-                <div className={active6?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                </motion.div> 
+              
+                <motion.div 
+                    variants={item}
+                    initial="hidden"
+                    animate={
+                        isInView?'visible':""
+                    }
+                    transition={{
+                        duration: 0.5,
+                        delay: 1.25
+                    }}
+                className={active6?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
                     handleClick(event)
                     setActive1(!active1);
                     setActive2(!active2);
@@ -160,7 +276,56 @@ function Projects (props){
                         </p>   
                     </div>
                     <img src={calculator} alt="calculator"/>
-                </div>          
+                </motion.div>     
+           </div>
+           <motion.h2
+             variants={variant1}
+             initial="hidden"
+             animate={
+                 isInView?'visible':""
+             }
+             transition={{
+                 duration: 1,
+                 type: "spring", 
+                 stiffness: 100
+             }}
+           >
+            Front End Projects</motion.h2>
+            <div className="card-container" >
+                {data.map((item)=>{
+                    return(
+                        <motion.div 
+                        variants={item}
+                        initial="hidden"
+                        animate={
+                            isInView?'visible':""
+                        }
+                        transition={{
+                            duration: 0.5,
+                            delay: item.id * 0.25
+                        }}
+                    className={active6?"none":(props.color==="light"?"card":"card darkbackground")} onClick={function(event){ 
+                        handleClick(event)
+                        setActive1(!active1);
+                        setActive2(!active2);
+                        setActive4(!active4);
+                        setActive5(!active5);
+                        setActive3(!active3);
+    
+                    }}>
+                         <div className='left-wrap'>
+                            <h4>{item.title}</h4>
+                            <p>{item.stack}</p>
+                            <p className={details?(props.color==="light"?"details":"details darkPar"):"none"}>{item.description}</p>
+                            <p className={details?"details":"none"}>    
+                            <a href={item.code}><VscGithub></VscGithub></a>
+                            <a href={item.live}>Live Demo</a>
+                            </p>   
+                        </div>
+                        <img src={item.url} alt={item.id}/>
+                    </motion.div>     
+                    )
+                })}
             </div>
         </section>
     )
